@@ -1,17 +1,16 @@
 import { useState } from "react";
 import styles from '../component/home.module.css';
-import typingGame from '../public/static/moon.jpg';
-// import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router'
 import Typewriter from 'typewriter-effect';
 
 const HomeComponent = () => {
     const [state] = useState({
         title: "How Fast Can You Type ?"
     })
-    // const history = useNavigate(); 
-    // const game = () => {
-    //     history('./game')
-    // }
+    const router = useRouter();
+    const handleClick = (e) => {
+        router.push('/game')
+    }
     return(
         <div className={styles.overall}>
         <div className={styles.imagescontainer}>
@@ -25,13 +24,13 @@ const HomeComponent = () => {
                   loop: true,
                   delay: 40,
                   strings: [
-                    "How Fast Can You Type ?"
+                    "Improve Your Typing Skills By Clicking The Button Below"
                   ]
               }}
             />
             </h2>
             <div className={styles.startedbutton}>
-                <button className={styles.startbutton}>Get Started</button>
+                <button onClick={handleClick} className={styles.startbutton}>Get Started</button>
             </div>
         </div>
         </div>

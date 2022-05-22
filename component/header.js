@@ -1,12 +1,14 @@
+import { useRouter } from 'next/router'
 import styles from '../component/header.module.css';
-// import { useNavigate } from 'react-router-dom';
+
 const Header = () => {
-    // const history = useNavigate(); 
-    // const home = () => {
-    //    history('./')
-    // }
+    const router = useRouter();
+    const handleClick = (e) => {
+        router.push('/')
+      }
+    
     return(
-        <div className={styles.headercontainer}>
+        <div onClick={handleClick} className={styles.headercontainer}>
             <h2 className={styles.headertext}>Typing Game</h2>
         </div>
     )

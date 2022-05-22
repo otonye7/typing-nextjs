@@ -6,9 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest"
   },
   "dependencies": {
+    "@babel/core": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.8.0",
+    "@testing-library/react": "^13.2.0",
+    "babel-jest": "^28.1.0",
+    "jest": "^28.1.0",
     "next": "12.1.6",
     "random-words": "^1.1.2",
     "react": "18.1.0",
