@@ -14,7 +14,7 @@ const HomeComponent = () => {
     return(
         <div className={styles.overall}>
         <div className={styles.imagescontainer}>
-            <img className={styles.image} src="/static/moon.jpg" alt="" />
+            <img className={styles.image} src="/static/real.jpg" alt="" />
         </div>
         <div className={styles.typescontainer}>
             <h2 className={styles.typestext}>
